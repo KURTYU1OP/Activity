@@ -1,6 +1,11 @@
 <?php
 include("config.php");
 include("firebaseRDB.php");
+session_start();
+if (!isset($_SESSION["logged_in"])) {
+    header("Location: login.php");
+    exit;
+}
 error_reporting(E_ALL & ~E_DEPRECATED & ~E_NOTICE);
 ini_set('display_errors', '0');
 
@@ -430,4 +435,5 @@ $data = json_decode($data, true);
 </script>
 </body>
 </html>
+
 
