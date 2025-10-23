@@ -1,6 +1,9 @@
 <?php
 include "config.php";
 include "firebaseRDB.php";
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_NOTICE);
+ini_set('display_errors', '0');
+
 
 $db = new firebaseRDB($databaseURL);
 
@@ -704,4 +707,5 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 </body>
+
 </html>
