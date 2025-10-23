@@ -43,16 +43,6 @@ $newKey = $sched_id . '-' . ($count + 1);
 // STEP 3: Save attendance record
 $db->update("attendance", $newKey, [
     "sched_id"          => $sched_id,
-    "faculty_id"        => $faculty_id,
-    "faculty_name"      => $faculty_name,
-    "section"           => $section,
-    "subject_code"      => $subject_code,
-    "room_mode"         => $room_mode,
-    "time_from"         => $time_from,
-    "time_to"           => $time_to,
-    "attendance_date"   => $attendance_date,
-    "learning_modality" => $learning_modality,
-    "meeting_link"      => $meeting_link,
     "attendance_status" => $attendance_status,
     "dress_code"        => $dress_code,
     "remarks"           => $remarks
@@ -62,3 +52,4 @@ $db->update("attendance", $newKey, [
 header("Location: attendance.php?success=1");
 exit;
 ?>
+
