@@ -1,6 +1,9 @@
 <?php
 include("config.php");
 include("firebaseRDB.php");
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_NOTICE);
+ini_set('display_errors', '0');
+
 
 $db = new firebaseRDB($databaseURL);
 $data = $db->retrieve("faculty");
@@ -427,3 +430,4 @@ $data = json_decode($data, true);
 </script>
 </body>
 </html>
+
