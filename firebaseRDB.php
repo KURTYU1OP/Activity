@@ -6,6 +6,7 @@
  */
 
 class firebaseRDB{
+   public $url;
    function __construct($url=null) {
       if(isset($url)){
          $this->url = $url;
@@ -77,3 +78,4 @@ class firebaseRDB{
    }
 
 }
+
